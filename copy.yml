@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+     - name: copying artifact from jenkins master to docker node
+       copy:
+         src: /var/lib/jenkins/workspace/testing/gameoflife-build/target/gameoflife-build-1.0-SNAPSHOT.jar
+         dest: /home/ubuntu/
+...		  
+
